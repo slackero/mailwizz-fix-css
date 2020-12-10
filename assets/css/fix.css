@@ -1,3 +1,50 @@
+body,
+.sidebar-menu,
+.panel-delivery-servers-pool .item,
+.main-header .logo,
+.pagination li a,
+.popover,
+.popover .popover-content,
+body.ctrl-campaigns_reports.act-login .content-wrapper .login-box-body .login-box-msg,
+body.ctrl-campaigns_reports.act-login .login-flex .login-form .login-box-body .login-box-msg,
+body.ctrl-guest.act-index .login-flex .login-form .login-box-body .login-box-msg,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+boxes-mw-wrapper.row .small-box > .inner h2 {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+input,
+select,
+button,
+input::-webkit-input-placeholder,
+input:-moz-placeholder,
+input:-ms-input-placeholder,
+input.cke_dialog_ui_input_text,
+select.cke_dialog_ui_input_select {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 .nav-tabs {
     position: relative;
     margin-bottom: -1px !important;

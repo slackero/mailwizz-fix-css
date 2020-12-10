@@ -14,13 +14,13 @@
 class FixCssExt extends ExtensionInit
 {
     // name of the extension as shown in the backend panel
-    public $name = 'Fix CSS';
+    public $name = 'Fix MailWizz CSS';
 
     // description of the extension as shown in backend panel
-    public $description = 'Fixes problems MailWizz CSS problems';
+    public $description = 'Fixes CSS problems, use system font stack';
 
     // current version of this extension
-    public $version = '1.0';
+    public $version = '1.1';
 
     // minimum app version
     public $minAppVersion = '1.3.6.2';
@@ -41,7 +41,7 @@ class FixCssExt extends ExtensionInit
      * so you can use any variation,
      * like: array('backend', 'customer'); or array('frontend');
      */
-    public $allowedApps = array('customer');
+    public $allowedApps = array('backend', 'customer');
 
     /**
      * The run method is the entry point of the extension.
@@ -55,6 +55,13 @@ class FixCssExt extends ExtensionInit
         });
     }
 
+    public function installCss() {
+        // Copy extension assets
+        $filesPathTo = Yii::getPathOfAlias('root.frontend.assets.fixcss');
+        $filesPathFrom = Yii::getPathOfAlias('root.apps.extensions.fix-css.assets');
+        $this->recurseCopy($filesPathFrom, $filesPathTo);
+    }
+
     /**
      * Code to run before enabling the extension.
      * Make sure to call the parent implementation
@@ -64,10 +71,7 @@ class FixCssExt extends ExtensionInit
      */
     public function beforeEnable()
     {
-        // Copy extension assets
-        $filesPathTo = Yii::getPathOfAlias('root.frontend.assets.fixcss');
-        $filesPathFrom = Yii::getPathOfAlias('root.apps.extensions.fix-css.assets');
-        $this->recurseCopy($filesPathFrom, $filesPathTo);
+        $this->installCss();
 
         // call parent
         return parent::beforeEnable();
@@ -95,5 +99,16 @@ class FixCssExt extends ExtensionInit
             }
         }
         closedir($dir);
+    }
+
+    /**
+     * This is called when the extension is actually updated
+     * So update logic goes here.
+     */
+    public function update()
+    {
+        $this->installCss();
+
+        return parent::update();
     }
 }
