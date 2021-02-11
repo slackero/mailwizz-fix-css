@@ -79,3 +79,7 @@ tt {
     border-top-right-radius: 4px !important;
     border-top: 1px solid #ddd !important;
 }
+
+.box-header .btn-group {
+    margin-bottom: 0;
+}
