@@ -83,3 +83,12 @@ tt {
 .box-header .btn-group {
     margin-bottom: 0;
 }
+
+a.preview-email-template {
+    display: inline-block;
+    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-height: 160px;
+    height: auto;
+}
