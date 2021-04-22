@@ -20,7 +20,7 @@ class FixCssExt extends ExtensionInit
     public $description = 'Fixes CSS problems, use system font stack';
 
     // current version of this extension
-    public $version = '1.1';
+    public $version = '1.2';
 
     // minimum app version
     public $minAppVersion = '1.3.6.2';
